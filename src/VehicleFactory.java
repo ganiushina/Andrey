@@ -1,4 +1,4 @@
-public class TrancportFactoryClass {
+public class VehicleFactory {
 
     static TransportFactory factory = new AutoFactory(new Car("BMW", 3));
 
