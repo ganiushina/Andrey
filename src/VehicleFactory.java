@@ -9,4 +9,7 @@ public class VehicleFactory {
         createInstance(name, size);
     }
 
+    public static void setFactory(TransportFactory factory) {
+        VehicleFactory.factory = factory;
+    }
 }
