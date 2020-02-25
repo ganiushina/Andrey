@@ -1,11 +1,11 @@
 public class Motorcycle implements Vehicle {
 
     String brand;
-    Model[] model;
+    Model[] models;
 
     public Motorcycle(String brand, int n) {
         this.brand = brand;
-        this.model = new Model[n];
+        this.models = new Model[n];
     }
 
     @Override
@@ -19,12 +19,19 @@ public class Motorcycle implements Vehicle {
     }
 
     @Override
-    public Model[] getModel() {
-        return model;
+    public Double getModel(String name) {
+        Double modelPrice = null;
+        for (int i = 0; i <models.length ; i++) {
+            if (models[i].name == name)
+                modelPrice = models[i].price;
+        }
+        return modelPrice;
     }
 
+
+
     @Override
-    public void setModel(Model[] model) {
-        this.model = model;
+    public void setModel(Model[] models) {
+        this.models = models;
     }
 }
